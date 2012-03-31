@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Test</title>
+    <script src="../src/shortcuts.js"></script>
+    <script>
+        function fn(keyInfo) {
+            document.getElementById('result').value = "1 pressed " + keyInfo.key;
+            return true;
+        }
+        shortcuts.add({
+                keyDesc:'Ctrl+Alt+O',
+                callback:fn
+        });
+        shortcuts.add({
+                keyDesc:'Shift+L',
+                callback:fn
+        });
+        shortcuts.add({
+                keyDesc:'Meta+L',
+                callback:fn
+        });
+        shortcuts.install();
+    </script>
+</head>
+
+<body>
+
+<input type="text" id="result" maxlength="30"/>
+
+</body>
+</html>
