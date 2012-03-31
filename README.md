@@ -9,13 +9,14 @@ Methods
 shortcuts.add
 --
 
-shortcuts.add({
-                keyDesc:'Ctrl+Alt+O',
-                callback:fn
-        });
+    shortcuts.add({
+                    keyDesc:'Ctrl+Alt+O',
+                    callback:fn
+            });
 
 The keyDesc is a plain text description of the shortcut.
-The callback is a function called with the shortcut is pressed, returns true to stop propagation
+
+The callback is a function called when the shortcut is pressed, returns true to stop propagation.
 
 shortcuts.install
 -
